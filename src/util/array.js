@@ -11,6 +11,12 @@ function arrayIsEquals(a1, a2){
     return true
 }
 
+function exchangeBetween(arr1, index1, arr2,index2){
+    arr1 = arr1[index1] + arr2[index2]
+    arr2 = arr1[index1] - arr2[index2]
+    arr1 = arr1[index1] - arr2[index2]
+}
+
 module.exports = {
     arrayIsEquals
 }
