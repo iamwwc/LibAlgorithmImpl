@@ -12,11 +12,33 @@ function arrayIsEquals(a1, a2){
 }
 
 function exchangeBetween(arr1, index1, arr2,index2){
-    arr1 = arr1[index1] + arr2[index2]
-    arr2 = arr1[index1] - arr2[index2]
-    arr1 = arr1[index1] - arr2[index2]
+    arr1[index1] = arr1[index1] + arr2[index2]
+    arr2[index2] = arr1[index1] - arr2[index2]
+    arr1[index1] = arr1[index1] - arr2[index2]
+    
+}
+
+function SliceArray(arr,start,end){
+    return new Proxy(arr,{
+        get:function(t,prop,receiver){
+            if(prop === "length"){
+                return end - start
+            }
+            prop = +prop
+            if(typeof end === 'undefined'){
+                end = arr.length
+            }
+            if(prop + start >= end){
+                throw "Out of Bound"
+            }
+            
+            return t[prop + start]
+        }
+    })
 }
 
 module.exports = {
-    arrayIsEquals
+    arrayIsEquals,
+    exchangeBetween,
+    SliceArray
 }

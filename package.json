@@ -1,0 +1,23 @@
+{
+  "name": "JsLibraryImpl",
+  "version": "1.0.0",
+  "description": "这里存放了一些刷题的算法和基本的数据结构",
+  "dependencies": {
+    "gulp": "^4.0.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/iamwwc/libAlgorithmImpl.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/iamwwc/libAlgorithmImpl/issues"
+  },
+  "homepage": "https://github.com/iamwwc/libAlgorithmImpl#readme"
+}
